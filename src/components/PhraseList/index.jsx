@@ -10,8 +10,7 @@ import HPadding from "../../common/Box/HorizontalBox/Padding";
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
-        position: 'relative',
-        overflow: 'auto',
+        overflow: 'scroll',
     },
 }));
 

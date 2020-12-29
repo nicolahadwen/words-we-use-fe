@@ -15,7 +15,8 @@ import HorizontalBox from "../../common/Box/HorizontalBox";
 import GreedyPadding from "../../common/Box/HorizontalBox/GreedyPadding";
 import Filter from "../../components/Filter";
 import VerticalBox from "../../common/Box/VerticalBox";
-import Padding from "../../common/Box/HorizontalBox/Padding";
+import VPadding from "../../common/Box/VerticalBox/Padding";
+import HPadding from "../../common/Box/HorizontalBox/Padding";
 
 const PhraseListPage = () => {
     const phraseList = useSelector(getPhraseList);
@@ -42,16 +43,17 @@ const PhraseListPage = () => {
         );
     }
     return (
-        <VerticalBox>
+        <VerticalBox height={"90%"}>
             <HorizontalBox height="none">
                 <GreedyPadding />
                 <Filter />
-                <Padding size={20} />
+                <HPadding size={20} />
             </HorizontalBox>
             <HorizontalBox>
                 <PhraseList phraseList={phraseList}/>
-                <Padding size={20} />
+                <HPadding size={20} />
             </HorizontalBox>
+            <VPadding size="200px" />
         </VerticalBox>
     );
 }

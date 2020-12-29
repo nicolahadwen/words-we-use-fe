@@ -10,7 +10,13 @@ const wait = ms => new Promise(
     (resolve, reject) => setTimeout(resolve, ms)
 );
 
-const fakeGetPhrases = (nextPageToken) => {
+const fakeGetPhrases = ({
+    sortType,
+    minVotes,
+    maxVotes,
+    countryCode,
+    nextPageToken
+}) => {
     console.log("called")
     if (nextPageToken === 2) {
         return TWO;
