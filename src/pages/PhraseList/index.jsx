@@ -11,6 +11,11 @@ import {
     loadSuccessAction,
 } from '../../redux/phraseList/actions';
 import {loadPhraseList} from "../../api/phraseList";
+import HorizontalBox from "../../common/Box/HorizontalBox";
+import GreedyPadding from "../../common/Box/HorizontalBox/GreedyPadding";
+import Filter from "../../components/Filter";
+import VerticalBox from "../../common/Box/VerticalBox";
+import Padding from "../../common/Box/HorizontalBox/Padding";
 
 const PhraseListPage = () => {
     const phraseList = useSelector(getPhraseList);
@@ -36,7 +41,19 @@ const PhraseListPage = () => {
             </CenterBox>
         );
     }
-    return <PhraseList phraseList={phraseList}/>;
+    return (
+        <VerticalBox>
+            <HorizontalBox height="none">
+                <GreedyPadding />
+                <Filter />
+                <Padding size={20} />
+            </HorizontalBox>
+            <HorizontalBox>
+                <PhraseList phraseList={phraseList}/>
+                <Padding size={20} />
+            </HorizontalBox>
+        </VerticalBox>
+    );
 }
 
 export default PhraseListPage;

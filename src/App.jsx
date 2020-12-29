@@ -12,7 +12,8 @@ const App = () => (
         top: 0,
         left : 0,
         overflow: 'none',
-    }}>
+    }}
+    >
         <ReactRouter history={{}}>
             <CssBaseline />
             <AppContainer>

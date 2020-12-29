@@ -1,12 +1,18 @@
 import React from "react";
+import VerticalBox from "../../../../common/Box/VerticalBox";
+import Map from "./Map";
+import Padding from "../../../../common/Box/VerticalBox/Padding";
+import LocationsBreakdown from "./LocationsBreakdown";
 
-const Map = () => {
-    console.log("process.env")
+const PhraseDetails = () => {
     return (
-        <div>
-            Hi!
-        </div>
+        <VerticalBox>
+            <Map />
+            <Padding size={20}/>
+            <LocationsBreakdown />
+        </VerticalBox>
     )
 }
 
-export default Map;
+
+export default PhraseDetails;

@@ -14,7 +14,7 @@ import VerticalBox from "../../../common/Box/VerticalBox";
 
 import styled from "styled-components";
 import {Button} from "@material-ui/core";
-
+import PhraseDetails from "./PhraseDetails";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -102,7 +102,7 @@ const PhraseComponent = ({
             </CardActions>
             <Collapse in={isExpanded} timeout="auto" unmountOnExit>
                 <CardContent>
-                    <Typography paragraph>More Stuff</Typography>
+                    <PhraseDetails />
                 </CardContent>
             </Collapse>
         </Card>

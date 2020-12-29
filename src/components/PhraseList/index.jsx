@@ -26,7 +26,7 @@ const PhraseList = ({
         <VBox >
             <List component="nav" aria-label="phrase list">
                 {phraseList.map(phrase => (
-                    <VBox height="none">
+                    <VBox key={phrase.phraseId} height="none">
                         <VPadding size={20}/>
                         <Phrase {...phrase} />
                     </VBox>
